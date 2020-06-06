@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/labirynth/static/css/main.4cab22fd.chunk.css",
+    "main.js": "/labirynth/static/js/main.3feeec51.chunk.js",
+    "main.js.map": "/labirynth/static/js/main.3feeec51.chunk.js.map",
+    "runtime-main.js": "/labirynth/static/js/runtime-main.589b571e.js",
+    "runtime-main.js.map": "/labirynth/static/js/runtime-main.589b571e.js.map",
+    "static/js/2.315cb819.chunk.js": "/labirynth/static/js/2.315cb819.chunk.js",
+    "static/js/2.315cb819.chunk.js.map": "/labirynth/static/js/2.315cb819.chunk.js.map",
+    "index.html": "/labirynth/index.html",
+    "precache-manifest.581523d7f9732c27b2f736365c2b04ae.js": "/labirynth/precache-manifest.581523d7f9732c27b2f736365c2b04ae.js",
+    "service-worker.js": "/labirynth/service-worker.js",
+    "static/css/main.4cab22fd.chunk.css.map": "/labirynth/static/css/main.4cab22fd.chunk.css.map",
+    "static/js/2.315cb819.chunk.js.LICENSE.txt": "/labirynth/static/js/2.315cb819.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.589b571e.js",
+    "static/js/2.315cb819.chunk.js",
+    "static/css/main.4cab22fd.chunk.css",
+    "static/js/main.3feeec51.chunk.js"
+  ]
+}
