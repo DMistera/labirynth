@@ -1,0 +1,961 @@
+[
+
+    {
+        "id": "start",
+        "text": "\"Obudź się!\"",
+        "next": "start-2"
+    },
+    {
+        "id": "start-2",
+        "text": "Otwierasz oczy ledwo przytomny. Słyszysz ćwierkanie ptaków i szelest liści. Czujesz na swojej twarzy ciepłe promienie słońca. Twoje ciało leży bezwładnie na trawie.",
+        "next": "start-3"
+    },
+    {
+        "id": "start-3",
+        "text": "Podnosisz się powoli i rozglądasz się. Widzisz przed sobą mur zarośnięty gąszczami. Mur jest dość niski lecz nie wystarczająco aby się na niego wspiąć. Rozciąga się on w obie strony tak że nie widzisz jego końca. Pośrodku stoi żelazna ogromna brama, która jest lekko uchylona.",
+        "next": "start-4"
+    },
+    {
+        "id": "start-4",
+        "text": "\"Stoisz przed bramą labiryntu. W tych murach przewodniczy Pani Sprawiedliwości. Ona zważy twój umysł w jednej ręce, twoje serce w drugiej. Jeśli znajdzie w tobie chciwość, śmierć będzie twoim wyrokiem. Jeśli uzna cię za godnego, dostaniesz lojalność i miłość imperium. Wybieraj mądrze. Walcz zwinnie. Zaufaj całkowicie. I niech znajdziesz zakończenie, na które zasługujesz.\"",
+        "next": "start-5"
+    },
+    {
+        "id": "start-5",
+        "text": "Rozglądasz się dookoła lecz nie możesz znaleźć źródła głosu. Za twoimi plecami rozpościera się łąka. W oddali możesz dostrzec góry.",
+        "options": [
+            {
+                "text": "Przejdź przez bramę.",
+                "next": "lab-1"
+            },
+            {
+                "text": "Ucieknij w stronę gór.",
+                "next": "end-2"
+            }
+        ]
+    },
+
+
+    {
+        "id": "lab-1",
+        "text": "Podchodzisz do bramy i zaczynasz pchać jej prawe skrzydło. Żelazna płyta wydaje głośny zgrzyt i stawia ogromny opór. Widać że nie była używana od wielu lat. Wkońcu udaje ci się przedostać na drugą stronę.\n\nWnętrze labiryntu wygląda równie antycznie jak na zęwnątrz. Dochodzisz do otwartej przestrzeni, lecz z powodu murów dochodzi tu mniej światła. Pod twoimi stopami leży zniszczona brukowana ścieżka na której narysowane są symbole lecz trudno je rozpoznać.",
+        "next": "lab-2"
+    },
+
+    {
+        "id": "lab-2",
+        "text": "Na środku przestrzeni stoi kamienna rzeźba w postaci kobiety. Nosi ona prostą suknię a jej oczy zawiązane są opaską. Jej ręcę wyciągnięte są szeroko ku górze i trzyma w nich po jednej płaskiej misce. Jej postura wskazuje na to że porównuje ciężar między zawartościami każdej z mis.\n\nZ każdej strony jesteś otoczony murami lecz dostrzegasz trzy przejścia: na zachód, na północ oraz na wschód. ",
+        "options": [
+            {
+                "text": "Przyjrzyj się dokładnie rzeźbie.",
+                "next": "statue"
+            },
+            {
+                "text": "Idź przejściem na zachód.",
+                "next": "lab-z-1"
+            },
+            {
+                "text": "Idź przejściem na północ.",
+                "next": "lab-p-1"
+            },
+            {
+                "text": "Idź przejściem na wschód.",
+                "next": "lab-w-1"
+            }
+        ]
+    },
+
+    {
+        "conditions": ["clay-cup", "golden-cup"],
+        "id": "lab-z-1",
+        "text": "Wszystkie puchary zostały przez ciebie zabrane. Na ołtarzu pozostała tylko brązowa inskrybcja.",
+        "options": [
+            {
+                "text": "Przeczytaj inskrybcję.",
+                "next": "inscription-1"
+            },
+            {
+                "text": "Powróć do miejsca w którym byłeś",
+                "next": "lab-2"
+            }
+        ]
+    },
+
+    {
+        "conditions": ["golden-cup"],
+        "id": "lab-z-1",
+        "text": "Na ołtarzu pozostał gliniany puchar oraz brązowa inskrybcja.",
+        "options": [
+            {
+                "text": "Przeczytaj inskrybcję.",
+                "next": "inscription-1"
+            },
+            {
+                "text": "Weź gliniany puchar.",
+                "next": "clay-cup-1",
+                "set": ["clay-cup"]
+            },
+            {
+                "text": "Powróć do miejsca w którym byłeś",
+                "next": "lab-2"
+            }
+        ]
+    },
+
+    {
+        "conditions": ["clay-cup"],
+        "id": "lab-z-1",
+        "text": "Na ołtarzu pozostał złoty puchar oraz brązowa inskrybcja.",
+        "options": [
+            {
+                "text": "Przeczytaj inskrybcję.",
+                "next": "inscription-1"
+            },
+            {
+                "text": "Weź złoty puchar.",
+                "next": "golden-cup-1",
+                "set": ["golden-cup"]
+            },
+            {
+                "text": "Powróć do miejsca w którym byłeś",
+                "next": "lab-2"
+            }
+        ]
+    },
+
+    {
+        "id": "lab-z-1",
+        "text": "Dochodzisz do miejsca które na pierwszy rzut oka przypomina ołtarz. Na murze wisi symbol przypominający krzyż. Wyykonany jest on z marmuru. Dookoła leżą kwiaty najróżniejszych gatunków.\n\nNa środku ołtarzu leży brązowa inskrybcja. Dostrzegasz także dwa puchary, każdy z nich leży na kamiennej płycie. Pierwszy puchar jest wykonany ze złota i jest ozdobiony licznymi klejnotami. Drugi jest mniejszy i jest wykonany z gliny. Nie ma on żadnych ozdób.",
+        "options": [
+            {
+                "text": "Przeczytaj inskrybcję.",
+                "next": "inscription-1"
+            },
+            {
+                "text": "Weź złoty puchar.",
+                "next": "golden-cup-1",
+                "set": ["golden-cup"]
+            },
+            {
+                "text": "Weź gliniany puchar.",
+                "next": "clay-cup-1",
+                "set": ["clay-cup"]
+            },
+            {
+                "text": "Powróć do miejsca w którym byłeś",
+                "next": "lab-2"
+            }
+        ]
+    },
+
+
+    {
+        "id": "clay-cup-1",
+        "text": "Podnosisz gliniany puchar. Dostrzegasz pod nim małą fiolke z napisem ANTIDOTUM. Wewnątrz niej znajduję się czarna substancja.",
+        "options": [
+            {
+                "text": "Weź antidotum.",
+                "next": "lab-z-1",
+                "set": ["antidote"]
+            },
+            {
+                "text": "Wyrzuć antidotum.",
+                "next": "lab-z-1"
+            }
+        ]
+    },
+
+    {
+        "id": "golden-cup-1",
+        "text": "W momencie w którym podniosłeś złoty puchar, kamienna płyta ruszyła się. Nim zorientowałeś się co się dzieje, ziemia zapadła się pod twoimi stopami i zacząłeś spadać w przepaść.\n\n Uderzyłeś o zimną podłogę. Rozglądasz się dookoła. Znajdujesz się w ciemnej komnacie i ledwo dostrzegasz ściany. Jedyne źródło światła dociera z otworu z którego spadłeś.\n\nNagle słyszysz zgrzyt i dostrzegasz że jedna ze ścian posuwa się powoli w twoją stronę. Jeśli nic nie zrobisz, zostaniesz zgnieciony!",
+        "options": [
+            {
+                "text": "Spróbuj wspiąć się na góre.",
+                "random": [
+                    {
+                        "weight": 1,
+                        "next": "golden-cup-2"
+                    },
+                    {
+                        "weight": 1,
+                        "next": "golden-cup-3"
+                    }
+                ]
+            },
+            {
+                "text": "Pomódl się o cud.",
+                "next": "golden-cup-4"
+            }
+        ]
+    },
+    {
+        "id": "golden-cup-2",
+        "text": "Próbujesz wspiąć się na góre lecz wszystkie ściany są zbyt gładkie by się po nich wspinać. Czekasz aż ruchoma ściana się do ciebie zbliży, następnie zapierając się o nią nogami przesuwasz się powoli ku górze. W ostatniej chwili udaje ci się wydostać z pułapki i ledwo ujść z życiem!",
+        "next": "lab-z-1"
+    },
+    {
+        "id": "golden-cup-3",
+        "text": "Próbujesz wspiąć się na góre lecz wszystkie ściany są zbyt gładkie by się po nich wspinać. Czekasz aż ruchoma ściana się do ciebie zbliży, następnie zapierając się o nią nogami przesuwasz się powoli ku górze. Niestety twoja noga się poślizgneła i spadasz spowrotem na sam dół. Nie możesz już nic innego zrobić niż czekać na swoją śmierć.",
+        "next": "game-over"
+    },
+    {
+        "id": "golden-cup-4",
+        "text": "Modlisz się o cud. Zgrzyt ściany staje się coraz głośniejszy. Modlisz się o przebaczenie twoich grzechów. Ruchoma ściana jest tuż przy tobie. Uświadamiasz sobie że twój los jest rezultatem twojej chciwości i nie możesz już nic z tym zrobić.",
+        "next": "game-over"
+    },
+
+
+
+    {
+        "id": "lab-p-1",
+        "text": "Podążasz ścieżką aż natrafiasz na coś nietypowego. Przed tobą dostrzegasz kilkadziesiąt dziur w murach rozprowadzone nieregularnie na twojej wysokości. Podłoga jest zapełniona czymś co wygląda jak kamienne płyty dociskowe. To chyba jest pułapka!",
+        "options": [
+            {
+                "text": "Uważnie nadepnij na pierwszą płytę dociskową",
+                "next": "lab-p-2"
+            },
+            {
+                "text": "Przebiegnij przez przejście",
+                "random": [
+                    {
+                        "weight": 1,
+                        "next": "lab-p-3"
+                    },
+                    {
+                        "weight": 2,
+                        "next": "lab-p-4"
+                    }
+                ]
+            },
+            {
+                "text": "Zawróć",
+                "next": "lab-2"
+            }
+        ]
+    },
+
+    {
+        "id": "lab-p-2",
+        "text": "Nadeptujesz lekko nogą na płytę dociskową i natychmiast ją cofasz. Ze wszystkich dziur wystrzeliwują kolce. Jedne z nich upadł ku twojej nodze. Ostrosznie bierzesz go do ręki aby zbadać. Na jednym końcu dostrzegasz żółtą i lepką substancję.",
+        "options": [
+            {
+                "text": "Przebiegnij przez przejście",
+                "random": [
+                    {
+                        "weight": 1,
+                        "next": "lab-p-3"
+                    },
+                    {
+                        "weight": 2,
+                        "next": "lab-p-4"
+                    }
+                ]
+            },
+            {
+                "text": "Zawróć",
+                "next": "lab-2"
+            }
+        ]
+    },
+
+    {
+        "id": "lab-p-3",
+        "text": "Biegniesz przez przejście i na koniec rzucasz się na przód. Wylądowałeś na ziemi. Obracasz się żeby zobaczyć jak wszystkie kolce wystrzeliwują nie natrafiając na żaden cel, lepiej nie wracać tą drogą. Oglądasz siebie szukając wbitych kolców ale wygląda na to że nic ci się nie stało.",
+        "next": "lab-p-7"
+    },
+
+    {
+        "id": "lab-p-4",
+        "text": "Biegniesz przez przejście i na koniec rzucasz się na przód. Wylądowałeś na ziemi. Obracasz się żeby zobaczyć jak wszystkie kolce wystrzeliwują nie natrafiając na żaden cel, lepiej nie wracać tą drogą. Oglądasz siebie szukając wbitych kolców i z przerażeniem znajdujesz jeden na swojej stopie.",
+        "options": [
+            {
+                "consumes": ["antidote"],
+                "text": "Wypij antidotum",
+                "next": "lab-p-5"
+            },
+            {
+                "text": "Idź dalej",
+                "next": "lab-p-6"
+            }
+        ]
+    },
+
+    {
+        "id": "lab-p-5",
+        "text": "Wypijasz antidotum. W ustach pozostał gorzki smak ale odrazu poczułeś się lepiej.",
+        "next": "lab-p-7"
+    },
+
+    {
+        "id": "lab-p-6",
+        "text": "Podążasz drogą dalej lecz po chwili twoje ciało zaczyna drętwieć Upadasz na ziemie i tracisz przytomność.",
+        "next": "game-over"
+    },
+
+    {
+        "conditions": ["hidden-path"],
+        "id": "lab-p-7",
+        "text": "Ślepy zaułek przestał być ślepym zaułkiem po tym jak znalazłeś ukryte przejście. Pod ścianą leży szkielet człowieka. Jak widać byłeś od niego sprytniejszy.",
+        "options": [
+            {
+                "text": "Przeszukaj szkielet",
+                "next": "lab-p-8"
+            },
+            {
+                "text": "Przejdź ukrytym przejściem",
+                "next": "lab-p-10"
+            }
+        ]
+    },
+
+    {
+        "id": "lab-p-7",
+        "text": "Dochodzisz do ślepego zaułku. Pod ścianą leży szkielet człowieka. Widocznie nie jesteś pierwszy który tutaj zaszedł.",
+        "options": [
+            {
+                "text": "Przeszukaj szkielet",
+                "next": "lab-p-8"
+            },
+            {
+                "text": "Odpocznij",
+                "next": "lab-p-9"
+            }
+        ]
+    },
+
+    {
+        "conditions": ["bandages"],
+        "id": "lab-p-8",
+        "text": "Szkielet ubrany jest w starą i zniszczoną odzież. Wziąłeś od niego bandaże. W jego skórzanej tunice znajduje się już tylko pergamin z tekstem.",
+        "options": [
+            {
+                "text": "Przeczytaj pergamin",
+                "next": "poem-1"
+            },
+            {
+                "text": "Zostaw szkieleta.",
+                "next": "lab-p-7"
+            }
+        ]
+    },
+
+    {
+        "id": "lab-p-8",
+        "text": "Szkielet ubrany jest w starą i zniszczoną odzież. W jego skórzanej tunice znajdujesz bandaże oraz pergamin z tekstem.",
+        "options": [
+            {
+                "text": "Weź bandaże",
+                "next": "lab-p-8",
+                "set": ["bandages"]
+            },
+            {
+                "text": "Przeczytaj pergamin",
+                "next": "poem-1"
+            },
+            {
+                "text": "Zostaw szkieleta.",
+                "next": "lab-p-7"
+            }
+        ]
+    },
+
+    {
+        "id": "lab-p-9",
+        "text": "Nie mając pomysłu nad dalszym rozwiązaniem siadasz na ziemii opierając się o mur. Poczułeś że jedna z cegieł nie jest przymocowana do muru i leży luźno. Naciskasz ją.\n\nSłyszysz zgrzyt mechanizmów i nagle cały fragment muru osuwa się wgłąb ziemii. Odsłania on ukryte przejście.",
+        "next": "lab-p-7",
+        "set": ["hidden-path"]
+    },
+
+    {
+        "id": "lab-p-10",
+        "text": "Idziesz ukrytym przejściem i dochodzisz z powrotem do punktu startowego. Zrobiłeś okrążenie!",
+        "next": "lab-2"
+    },
+
+    {
+        "conditions": ["blade-blocking"],
+        "id": "lab-w-1",
+        "text": "Idąc ścieżką natrafiłeś na ogromne ostrze które utkneło w szkielecie. Przejście jest zablokowane!",
+        "options": [
+            {
+                "not": ["stone-key"],
+                "text": "Podnieś kamienny klucz.",
+                "next": "lab-w-9",
+                "set": ["stone-key"]
+            },
+            {
+                "not": ["sword"],
+                "text": "Weź miecz od szkieleta.",
+                "next": "lab-w-8",
+                "set": ["sword"]
+            },
+            {
+                "text": "Zawróć",
+                "next": "lab-2"
+            }
+        ]
+    },
+
+    {
+        "id": "lab-w-1",
+        "text": "Idąc ścieżką natrafiłeś na ogromne ostrze blokujące przejście, które za pomocą mechanizmu podnosi się i spada bez przerwy. Uderzenie takiego ostrza wydaję się być bardzo zabójcze lecz podnosi się wolno przez co daje dużą szanse na przejście.",
+        "options": [
+            {
+                "text": "Spróbuj przejść pod ostrzem.",
+                "next": "lab-w-2"
+            },
+            {
+                "text": "Zawróć",
+                "next": "lab-2"
+            }
+        ]
+    },
+
+    {
+        "id": "lab-w-2",
+        "text": "Udaje ci się przeskoczyć na drugą stronę w jednym kawałku tuż zanim ostrze opadło. Podążasz dalej ścieżką.",
+        "next": "lab-w-3"
+    },
+
+    {
+        "conditions": ["stone-key"],
+        "id": "lab-w-3",
+        "text": "Dochodzisz do miejsca gdzie stał szkielet lecz jego już nie ma. Zamiast tego znajdujesz pergamin leżący na ziemi.",
+        "options": [
+            {
+                "text": "Przyczytaj pergamin",
+                "next": "note-1"
+            },
+            {
+                "text": "Zawróc",
+                "next": "lab-2"
+            }
+        ]
+    },
+
+    {
+        "id": "lab-w-3",
+        "text": "Na końcu ścieżki spotykasz stojącego szkieleta. Nosi on czarną poniszczoną zbroje oraz jednoręczny miecz. W miejsce jego oczu widzisz małe czerwone płomyki. Na twój widok wyciągnął miecz w twoją stronę i orzekł:\n\n\"Zmęczony wędrowca zbliża się do końca swojej ścieżki. Odpowiedz mi uważnie albowiem twoja odpowiedź przesądzi o twoim losie. Co jest potomstwem cierpienia i czasu?\"",
+        "options": [
+            {
+                "text": "\"Natura\"",
+                "next": "lab-w-5"
+            },
+            {
+                "text": "\"Pycha\"",
+                "next": "lab-w-5"
+            },
+            {
+                "text": "\"Rozsądek\"",
+                "next": "lab-w-4",
+                "set": ["stone-key"]
+            },
+            {
+                "text": "\"O co ci chodzi?\"",
+                "next": "lab-w-5"
+            }
+        ]
+    },
+
+    {
+        "id": "lab-w-4",
+        "text": "Szkielet wydaje się zadowolony z twojej odpowiedzi. Chowa swój miecz i przekazuje ci kamienny klucz, dodając \"Tylko kamienny klucz może otworzyć kamienne drzwi\"",
+        "options": [
+            {
+                "text": "\"Czy mogę też wziąć twój miecz?\"",
+                "next": "lab-w-5"
+            },
+            {
+                "text": "Wróć do miejsca z kamienną rzeźbą",
+                "next": "lab-2"
+            }
+        ]
+    },
+
+    {
+        "id": "lab-w-5",
+        "text": "Ognie w oczach szkieleta zapaliły się w gniewie. Natychmiast przymierza się on aby odciąć ci głowę jednym cięciem miecza.",
+        "options": [
+            {
+                "text": "\"Hej, stój! Możemy się jeszcze dogadać!\"",
+                "next": "lab-w-12"
+            },
+            {
+                "text": "Uciekaj",
+                "random": [
+                    {
+                        "weight": 3,
+                        "next": "lab-w-6"
+                    },                    
+                    {
+                        "weight": 1,
+                        "next": "lab-w-7"
+                    }
+                ]
+            }
+        ]
+    },
+
+    {
+        "conditions": ["stone-key"],
+        "id": "lab-w-6",
+        "text": "Obracasz się by uciec gdy nagle poczułeś mocne uderzenie na plecach. Przez adrenalinę nie czujesz żadnego bólu, twoim jedynym celem jest przeżycie.\n\nZrywasz się do ucieczki. Biegniesz przejściem z którego przyszedłeś aż natrafiasz na znajome ogromne ostrze. Nie zastanawiając się dłużej, przeskakujesz pod nim. Sekundę póżniej słyszysz głośny zgrzyt kości. Obracasz się aby ujrzeć ogromną masę metalu która opadła na goniącego cię szkieleta. Wydaje się on być martwy. \n\n Gdy zagrożenie mineło, dopiero teraz poczułeś silny ból w plecach. Czujesz jak ciepła kew spływa ci po skórze. Jeśli nic nie zrobisz to wykrwawisz się na śmierć!",
+        "set": ["bleeding", "blade-blocking"],
+        "options": [
+            {
+                "text": "Weź miecz od szkieleta.",
+                "next": "lab-w-10"
+            },
+            {
+                "consumes": ["bandages"],
+                "text": "Użyj bandażu",
+                "next": "lab-w-11"
+            },
+            {
+                "text": "Powróć do punktu z kamienną rzeźbą",
+                "next": "lab-w-10"
+            }
+        ]
+    },
+
+    {
+        "id": "lab-w-6",
+        "text": "Obracasz się by uciec gdy nagle poczułeś mocne uderzenie na plecach. Przez adrenalinę nie czujesz żadnego bólu, twoim jedynym celem jest przeżycie.\n\nZrywasz się do ucieczki. Biegniesz przejściem z którego przyszedłeś aż natrafiasz na znajome ogromne ostrze. Nie zastanawiając się dłużej, przeskakujesz pod nim. Sekundę póżniej słyszysz głośny zgrzyt kości. Obracasz się aby ujrzeć ogromną masę metalu która opadła na goniącego cię szkieleta. Wydaje się on być martwy. Z jego ręki wypadł kamienny klucz.\n\n Gdy zagrożenie mineło, dopiero teraz poczułeś silny ból w plecach. Czujesz jak ciepła kew spływa ci po skórze. Jeśli nic nie zrobisz to wykrwawisz się na śmierć!",
+        "set": ["blade-blocking"],
+        "options": [
+            {
+                "text": "Podnieś kamienny klucz.",
+                "next": "lab-w-10"
+            },
+            {
+                "text": "Weź miecz od szkieleta.",
+                "next": "lab-w-10"
+            },
+            {
+                "consumes": ["bandages"],
+                "text": "Użyj bandażu",
+                "next": "lab-w-11"
+            },
+            {
+                "text": "Powróć do punktu z kamienną rzeźbą",
+                "next": "lab-w-10"
+            }
+        ]
+    },
+
+    {
+        "conditions": ["stone-key"],
+        "id": "lab-w-7",
+        "text": "Zrywasz się do ucieczki. Biegniesz przejściem z którego przyszedłeś aż natrafiasz na znajome ogromne ostrze. Nie zastanawiając się dłużej, przeskakujesz pod nim. Sekundę póżniej słyszysz głośny zgrzyt kości. Obracasz się aby ujrzeć ogromną masę metalu która opadła na goniącego cię szkieleta. Wydaje się on być martwy.",
+        "set": ["blade-blocking"],
+        "options": [
+            {
+                "text": "Podnieś kamienny klucz.",
+                "next": "lab-w-9",
+                "set": ["stone-key"]
+            },
+            {
+                "text": "Weź miecz od szkieleta.",
+                "next": "lab-w-8",
+                "set": ["sword"]
+            },
+            {
+                "text": "Powróć do punktu z kamienną rzeźbą",
+                "next": "lab-2"
+            }
+        ]
+    },
+
+    {
+        "id": "lab-w-7",
+        "text": "Zrywasz się do ucieczki. Biegniesz przejściem z którego przyszedłeś aż natrafiasz na znajome ogromne ostrze. Nie zastanawiając się dłużej, przeskakujesz pod nim. Sekundę póżniej słyszysz głośny zgrzyt kości. Obracasz się aby ujrzeć ogromną masę metalu która opadła na goniącego cię szkieleta. Wydaje się on być martwy. Z jego ręki wypadł kamienny klucz.",
+        "set": ["blade-blocking"],
+        "options": [
+            {
+                "text": "Weź miecz od szkieleta.",
+                "next": "lab-w-8",
+                "set": ["sword"]
+            },
+            {
+                "text": "Powróć do punktu z kamienną rzeźbą",
+                "next": "lab-2"
+            }
+        ]
+    },
+
+    {
+        "id": "lab-w-8",
+        "text": "Podnosisz miecz. Mimo że jest antyczny, wydaje się być bardzo ostry.",
+        "options": [
+            {
+                "not": ["stone-key"],
+                "text": "Podnieś kamienny klucz.",
+                "next": "lab-w-9",
+                "set": ["stone-key"]
+            },
+            {
+                "text": "Powróć do punktu z kamienną rzeźbą",
+                "next": "lab-2"
+            }
+        ]
+    },
+
+    {
+        "id": "lab-w-9",
+        "text": "Bierzesz do ręki wykuty kamienny klucz.",
+        "options": [
+            {
+                "not": ["sword"],
+                "text": "Weź miecz od szkieleta.",
+                "next": "lab-w-8",
+                "set": ["sword"]
+            },
+            {
+                "text": "Powróć do punktu z kamienną rzeźbą",
+                "next": "lab-2"
+            }
+        ]
+    },
+
+    {
+        "id": "lab-w-10",
+        "text": "Mocny ból uniemożliwia ci wykonanie tej czynności. Opadasz na ziemię. Nie masz siły wstać. Pozostajesz w takim stanie jeszcze przez kilka godzin aż wkońcu tracisz przytomność.",
+        "next": "game-over"
+    },
+
+    {
+        "id": "lab-w-11",
+        "text": "Owijasz bandaż wokół twojego tułowia, mocna zaciskając ranę. Czujesz się o wiele lepiej.",
+        "options": [
+            {
+                "text": "Podnieś kamienny klucz.",
+                "next": "lab-w-9",
+                "set": ["stone-key"]
+            },
+            {
+                "text": "Weź miecz od szkieleta.",
+                "next": "lab-w-8",
+                "set": ["sword"]
+            },
+            {
+                "text": "Powróć do punktu z kamienną rzeźbą",
+                "next": "lab-2"
+            }
+        ]
+    },
+
+    {
+        "id": "lab-w-12",
+        "text": "Zanim skończyłeś wymawiać zdanie, szkielet odciął ci głowę.",
+        "next": "game-over"
+    },
+
+
+    {
+        "id": "statue",
+        "text": "Na podstawie rzeźby dostrzegasz wykuty i ledwo czytelny napis. Udaje ci się odczytać zdanie \"Bogini Sprawiedliwości Patrzy\".\n\nPo drugiej stronie rzeźby znajdujesz coś co przypomina dziurę do klucza.",
+        "options": [
+            {
+                "consumes": ["stone-key"],
+                "text": "Włóż kamienny klucz do otworu.",
+                "next": "ghost-1"
+            },
+            {
+                "text": "Wróć.",
+                "next": "lab-2"
+            }
+        ]
+    },
+
+    {
+        "conditions": ["introduced"],
+        "id": "ghost-1",
+        "text": "Mężczyzna kiwa głową, dając ci znak na kontynuowanie konwersacji.",
+        "options": [
+            {
+                "not": ["who"],
+                "text": "\"Kim jesteś?\"",
+                "next": "ghost-2",
+                "set": ["who"]
+            },
+            {
+                "not": ["what"],
+                "text": "\"Co ty tu robisz?\"",
+                "next": "ghost-5",
+                "set": ["what"]
+            },
+            {
+                "not": ["where"],
+                "text": "\"Co to za miejsce?\"",
+                "next": "ghost-13",
+                "set": ["where"]
+            }
+        ]
+    },
+
+    {
+        "id": "ghost-1",
+        "text": "Słyszysz zgrzyt mechanizmów i nagle rzeźba odsuwa się powoli odłaniając schody do podziemnej komnaty. Na ścianach wiszą liczne zapalone pochodnie..\n\nWchodzisz do środka i dostrzegasz mężczyznę siedzącego na kamiennej ławie. Ubrany jest on w szlachecki strój. Nie zauważasz przy nim żadnej broni.\n\n Mężczyzna podniósł wzrok na twój widok i orzekł: \"Na siebem niebiostw! Wkońcu jakaś żywa dusza!\"",
+        "set": ["introduced"],
+        "options": [
+            {
+                "not": ["who"],
+                "text": "\"Kim jesteś?\"",
+                "next": "ghost-2",
+                "set": ["who"]
+            },
+            {
+                "not": ["what"],
+                "text": "\"Co ty tu robisz?\"",
+                "next": "ghost-5",
+                "set": ["what"]
+            },
+            {
+                "not": ["where"],
+                "text": "\"Co to za miejsce?\"",
+                "next": "ghost-13",
+                "set": ["where"]
+            }
+        ]
+    },
+
+    {
+        "id": "ghost-2",
+        "text": "\"Ah! Gdzie moje maniery! Mów mi Caspiro. Tak, ten słynny poszukiwacz skarbów.",
+        "options": [
+            {
+                "text": "\"Nigdy o tobie nie słyszałem...\"",
+                "next": "ghost-3"
+            },
+            {
+                "text": "\"Mam inne pytanie...\"",
+                "next": "ghost-1"
+            }
+        ]
+    },
+
+    {
+        "id": "ghost-3",
+        "text": "\"Huh? Niespotykane. Nie ma miejsca w całym imperium gdzie słowo o moich dokonaniach jeszcze nie doszło... Właściwie to nie wyglądasz mi na Ezomyjczyka. Kim jesteś?\"",
+        "options": [
+            {
+                "text": "\"To nie jest ważne.\"",
+                "next": "ghost-4"
+            },
+            {
+                "text": "\"Trafiłem tu przez przypadek.\"",
+                "next": "ghost-4"
+            },
+            {
+                "text": "\"Mam na imię Izaro, jestem cesarzem imperium.\"",
+                "next": "ghost-4"
+            }
+        ]
+    },
+
+    {
+        "id": "ghost-4",
+        "text": "\"Jak nie chcesz to nie mów. Uwielbiam tajemnice!\"",
+        "next": "ghost-1"
+    },
+
+    {
+        "id": "ghost-5",
+        "text": "\"To samo co ty, szukam szybkiego zarobku. Legenda głosi że ukryte są tutaj skarby i bogactwa samego cesarza! Niestety przejście do tej komnaty zamkneło się za moimi plecami i tutaj utknąłem. Na szczęście znalazłem przejście które może prowadzić do wyjścia albo nawet do złota! Niestety nie jestem w stanie sam tego otworzyć.\"\n\nMężczyzna wskazał palcem na przeciwną ścianę gdzie znajdowała się drewniana brama. Drewno było zwietrzałe i widoczne były ślady po kornikach. Wydaję ci się że jeden mężczyzna może z łatwością ją wyważyć.",
+        "options": [
+            
+            {
+                "text": "\"Pomogę ci otworzyć bramę!\"",
+                "next": "ghost-9"
+            },
+
+            {
+                "text": "\"Jak długo byłeś tutaj uwięziony?\"",
+                "next": "ghost-6"
+            },
+
+            {
+                "text": "\"Jak dokładnie tutaj się dostałeś?\"",
+                "next": "ghost-7"
+            }
+        ]
+    },
+
+    {
+        "id": "ghost-6",
+        "text": "\"Już dawno straciłem rachubę czasu. Czuje jakby to była wieczność!\"",
+        "options": [
+            {
+                "text": "\"Więc pora się wkońcu stąd wydostać! Pomogę ci otworzyć bramę!\"",
+                "next": "ghost-9"
+            },
+
+            {
+                "text": "\"Jak dokładnie tutaj się dostałeś?\"",
+                "next": "ghost-7"
+            }
+        ]
+    },
+
+    {
+        "id": "ghost-7",
+        "text": "\"Co to za pytanie?? Tak samo jak ty!\"",
+        "options": [
+            {
+                "text": "\"Wybacz! Pomogę ci otworzyć ta bramę!\"",
+                "next": "ghost-9"
+            },
+            {
+                "text": "\"Chce znać cała historię ze szczegółami!\"",
+                "next": "ghost-8"
+            }
+        ]
+    },
+
+    {
+        "id": "ghost-8",
+        "text": "\"Hmm... Niech pomyślę... Po drodzę musiałem rozwiązać kilka zagadek z symbolami. Następnie znalazłem ukrytą dźwignie która odsłoniła przejście do tej komnaty.\"",
+        "options": [
+            {
+                "text": "\"To brzmi prawidłowo. Pomogę ci otworzyć tą bramę!\"",
+                "next": "ghost-9"
+            },
+            {
+                "text": "\"Coś się chyba nie zgadza...\"",
+                "next": "ghost-10"
+            }
+        ]
+    },
+
+    {
+        "id": "ghost-9",
+        "text": "Podchodzisz do bramy i dostrzegasz metalową klamkę. Naciskasz ją. Brama nie stawia większego oporu. Za bramą ujawnia się czarna otchłań. Po plecach przechodzi ci dreszcz. Nagle twarz mężczyzny stała się biała jak śnieg i wydaje głośny i nienaturalny krzyk:\n\n\"MOI PRZODKOWIE! PRZYJMIJCIĘ TĄ OTO OFIARĘ KTÓRĄ WAM SKŁADAM! BŁAGAM WAS O PRZEBACZENIE!\"\n\nW mgnieniu oka komnata wypełniła się strasznymi upiorami które rozszarpały cię na kawałki.",
+        "next": "game-over"
+    },
+
+    {
+        "id": "ghost-10",
+        "text": "\"Czy ty mnie o coś oskarżasz?\"\n\n Mężczyzna wstaje wyraźnie rozgniewany i idzie w twoim kierunku z zaciśniętymi pięśniami.",
+        "options": [
+            {
+                "text": "\"Nie miałem nic złego na myśli.\"",
+                "next": "ghost-11"
+            },
+            {
+                "text": "Rzuć się na mężczyznę",
+                "next": "ghost-12"
+            },
+            {
+                "conditions": ["sword"],
+                "text": "Wbij miecz w serce mężczyzny",
+                "next": "ghost-14"
+            }
+        ]
+    },
+
+    {
+        "id": "ghost-11",
+        "text": "Mężczyzna złapał cię za szyję i podniósł do góry. Probujesz się wyrwać jednak jego ucisk jest nienaturnie silny. Zostałeś uduszony.",
+        "next": "game-over"
+    },
+
+    {
+        "id": "ghost-12",
+        "text": "Rzucasz się na mężczyznę lecz chybiasz. Wydaje ci się że przez przeleciałeś prosto przez niego jakby był powietrzem. Nim zorientowałeś się co się stało, mężczyzna złapał cię za szyję i podniósł do góry. Probujesz się wyrwać jednak jego ucisk jest nienaturnie silny. Zostałeś uduszony.",
+        "next": "game-over"
+    },
+
+    {
+        "id": "ghost-13",
+        "text": "\"To jest Pański Labirynt! Został stworzony po to aby wybrać godnego następce tronu. Ci którzy nie są jego godni, giną w męczarniach... uh.. przynajmniej tak głoszą legendy. Jak tutaj trafiłeś nie wiedząc co to za miejsce!\"",
+        "options": [
+            {
+                "text": "\"Mam inne pytanie...\"",
+                "next": "ghost-1"
+            }
+        ]
+    },
+
+    {
+        "id": "ghost-14",
+        "text": "Wbijasz miecz w serce mężczyzny. Miecz przechodzi w ciało mężczyzny bez żadnego oporu. Nie dostrzegasz żadnej krwi, jednak mężczyzna wydał głośny i nienaturalny krzyk tak że instynktownie zasłaniasz swoje uszy. Mężczyzna stał się biały jak śnieg i nagle... wyparował w powietrze. Tak jakby go nigdy nie było.\n\n Zamiast niego pojawiło się berło. Nie miało prawie żadnych ozdób ale z jakiegoś powodu emanowało potęgą. Nagle usłyszałeś znajomy głos w swojej głowie, ten sam głos który przywitał cię przed wejściem do labiryntu:\n\n\"To władca wzmacnia berło. Nie na odwrót.\"",
+        "next": "end-1"
+    },
+
+    {
+        "id": "end-1",
+        "text": "Nagle wszystko znikneło. Nie ma już komnaty. Nie ma już labiryntu.\n\nZnalazłeś się w znajomym miejscu, twoim domu. Zastanawiasz się czy to wszystko to był sen. Coś ciąży ci na dłoni. Jest to berło. To jednak nie był sen. Uśmiechasz się myśląc jaką wspaniałą przygodę właśnie przeżyłeś.",
+        "next": "game-end"
+    },
+
+    {
+        "id": "end-2",
+        "text": "Wyruszasz w stronę gór. Idziesz tak przez około godzinę. Martwisz się czy dotrzesz do cywilizacji. Nagle sceneria przed oczami się zmieniła. Znajdujesz się w znajomym miejscu, twoim domie. Wnioskujesz że musiałeś niechcący przysnąć i to wszystko to był tylko sen.",
+        "options": [
+            {
+                "text": "Zagraj jeszcze raz.",
+                "next": "start"
+            }
+        ]
+    },
+
+    {
+        "id": "inscription-1",
+        "text": "\"Zwyczaj Pańskiej próby był podtrzymywany przez lata przez założycielskie Imperium. Następca Veruso, Caspiro, był nisko urodzonym legionistą, samotnym ocalałym z labiryntu, który odebrał życie każdemu wysoko urodzonemu przeciwnikowi, w tym jedynemu synowi Veruso.\n\nCaspiro okazał się być w każdym calu tym cesarzem, którym był Veruso.\n\nNiestety, Pański Labirynt został skorumpowany przez tych, którzy z próżnością uważali, że ich krew jest cenniejsza niż ich imperium. Samolubna krew rodzi samolubne czasy, a Imperium zapłaciło za to swoją własną krwią. Nocą tysiąca wstążek.\n\nTo już koniec. Ja, Izaro Phrecius, oddam nas w ręce sprawiedliwości. Zbuduję największy Labirynt Pański w historii Azmerii, a mój następca zostanie wybrany przez samą Boginię.\n\nTylko wtedy, gdy Pański Labirynt będzie zalany samolubną krwią, prawdziwy przywódca może wstąpić na tron.\"\n\n- Cesarz Izaro Phrecius",
+        "options": [
+            {
+                "text": "Wróć.",
+                "next": "lab-z-1"
+            }
+        ]
+    },
+
+    {
+        "id": "poem-1",
+        "text": "\"Syn Ezomira spotkał Syna Sarn.\nNa drodze do tronu cesarskiego.\nWieczny zaoferował swój spryt,\nJego oczy i uszy, kupione i opłacone.\nEzomyjczyk zaoferował swoją siłę,\nJego miecz, zdobyty na arenie.\nPakt został zawarty,\nZ Labiryntem jako świadkiem.\nDwóch mężczyzn rozdzielonych krwią.\nDwóch ludzi związanych nadzieją.\nDwóch ludzi, i tylko jeden cesarz.\"",
+        "options": [
+            {
+                "text": "Wróć.",
+                "next": "lab-p-8"
+            }
+        ]
+    },
+
+    {
+        "id": "note-1",
+        "text": "Noc tysiąca wstążek\nAby przypomnieć sobie dzień tysiąca płomieni\nKiedy Sarn spalił się\nI narodził się ponownie.",
+        "options": {
+            "text": "Wróć.",
+            "next": "lab-w-3"
+        }
+    },
+
+    {
+        "id": "game-over",
+        "text": "Zginąłeś śmiercią tragiczną. Widocznie to jest zakończenie na które zaslugujesz.",
+        "options": [
+            {
+                "text": "Spróbuj zagrać jeszcze raz.",
+                "next": "start"
+            }
+        ]
+    },
+
+    {
+        "id": "game-end",
+        "text": "Przeszedłeś grę. Gratulacje!",
+        "options": [
+            {
+                "text": "Zagraj jeszcze raz.",
+                "next": "start"
+            }
+        ]
+    },
+
+
+    {
+        "id": "todo",
+        "text": "Jeśli tu doszedłeś to oznacza to że tu powinna być historia ale jej jeszcze nie ma!",
+        "next": "start"
+    }
+]
